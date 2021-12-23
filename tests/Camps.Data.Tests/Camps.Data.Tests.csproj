@@ -20,4 +20,8 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\Camps.Data\Camps.Data.csproj" />
+    </ItemGroup>
+
 </Project>

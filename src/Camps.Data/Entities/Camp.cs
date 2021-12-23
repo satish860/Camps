@@ -23,7 +23,7 @@ public class Camp
     /// <summary>
     /// Gets or sets Moniker for the Camp.
     /// </summary>
-    [Indexed(Normalize = true, Sortable = true)]
+    [Indexed(Normalize = true)]
     public string Moniker { get; set; } = null!;
 
     /// <summary>
@@ -35,11 +35,16 @@ public class Camp
     /// <summary>
     /// Gets or Sets the Date of Event.
     /// </summary>
-    [Indexed(Sortable = true)]
+    [Indexed]
     public DateTime EventDate { get; set; } = DateTime.MinValue;
 
     /// <summary>
     /// Gets or sets the Length of the Camp.
     /// </summary>
     public int Length { get; set; } = 1;
+
+    /// <summary>
+    /// Gets or Sets Talks. This contains the reference of Talks.
+    /// </summary>
+    public IList<string>? Talks { get; set; }
 }

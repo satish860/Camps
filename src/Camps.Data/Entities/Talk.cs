@@ -1,23 +1,29 @@
-﻿namespace Camps.Data.Entities;
+﻿using Redis.OM.Modeling;
+
+namespace Camps.Data.Entities;
 
 /// <summary>
 /// Entity for the Talks in the camp.
 /// </summary>
+[Document(StorageType = StorageType.Json)]
 public class Talk
 {
     /// <summary>
     /// Gets or sets Talk ID.
     /// </summary>
+    [RedisIdField]
     public string TalkId { get; set; } = null!;
 
     /// <summary>
     /// Gets or Sets Camp ID.
     /// </summary>
-    public int CampId { get; set; }
+    [Indexed]
+    public string? CampId { get; set; }
 
     /// <summary>
     /// Gets or sets Title of Talk.
     /// </summary>
+    [Indexed]
     public string Title { get; set; } = null!;
 
     /// <summary>
@@ -33,5 +39,5 @@ public class Talk
     /// <summary>
     /// Gets or sets the Speaker of the talks.
     /// </summary>
-    public int? Speaker { get; set; }
+    public Speaker? Speaker { get; set; }
 }

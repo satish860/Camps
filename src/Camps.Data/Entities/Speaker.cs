@@ -17,21 +17,25 @@ public class Speaker
     /// <summary>
     /// Gets or Sets First Name.
     /// </summary>
+    [Indexed]
     public string FirstName { get; set; } = null!;
 
     /// <summary>
     /// Gets or Sets the Last Name.
     /// </summary>
+    [Indexed]
     public string LastName { get; set; } = null!;
 
     /// <summary>
     /// Gets or sets the Middle Name.
     /// </summary>
+    [Indexed]
     public string? MiddleName { get; set; }
 
     /// <summary>
     /// Gets or Sets the company of the speaker.
     /// </summary>
+    [Indexed]
     public string? Company { get; set; }
 
     /// <summary>
